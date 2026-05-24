@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JP's 33rd Birthday Guest List</title>
+<link rel="icon" type="image/png" href="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/sites/2147575052/images/68675ed-7707-348-bc7e-5b4fd607d17_Base_44_Logos_1_.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;1,9..40,400;1,9..40,500&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --wine:#741717;--wine-deep:#3C050F;--cherry:#2F0410;
+  --cream:#F5F0E7;--cream2:#EDE6D6;--white:#FFFFFF;
+  --pink:#F2C4CE;--pink-soft:#FAEAED;--pink-mid:#E8B0BD;--pink-deep:#D4879A;
+  --mauve:#B08B91;--caramel:#8D695D;--black:#0D0608;--gold:#C4914A;
+  --r:24px;--r-lg:36px;--rpill:100px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--cream);font-family:'DM Sans',Helvetica,Arial,sans-serif;color:var(--cherry);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9990;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");opacity:.4;}
+
+.page{display:none;}
+.page.active{display:block;animation:pgIn .45s ease both;}
+@keyframes pgIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+
+/* ── CONFETTI CANVAS ── */
+#confetti-canvas{position:fixed;inset:0;pointer-events:none;z-index:9998;opacity:0;transition:opacity .3s;}
+#confetti-canvas.active{opacity:1;}
+
+/* ── SHARED ── */
+.lbl{font-weight:800;font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--caramel);}
+.strikethrough{text-decoration:line-through;color:var(--mauve);opacity:.7;}
+.dot-pulse{width:5px;height:5px;border-radius:50%;background:var(--wine);animation:pulse 1.4s infinite;display:inline-block;flex-shrink:0;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.2;}}
+.btn-back{background:none;border:none;cursor:pointer;font-weight:700;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--caramel);display:flex;align-items:center;gap:5px;transition:color .2s;}
+.btn-back:hover{color:var(--wine-deep);}
+.btn-back::before{content:'←';font-size:13px;}
+
+/* ════════════════════
+   PAGE 1 — LANDING
+════════════════════ */
+#p1{background:var(--pink-soft);min-height:100vh;}
+.p1-top{display:flex;justify-content:space-between;align-items:center;padding:22px 28px;background:var(--white);border-bottom:1px solid rgba(176,139,145,.16);}
+.p1-top-brand{font-weight:900;font-size:15px;letter-spacing:.02em;color:var(--wine-deep);}
+.p1-top-tag{font-weight:600;font-size:8.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--mauve);}
+
+.p1-hero{padding:44px 20px 48px;max-width:680px;margin:0 auto;display:flex;flex-direction:column;align-items:center;text-align:center;}
+
+/* hero card */
+.hero-card{width:100%;background:var(--wine-deep);border-radius:var(--r-lg);padding:52px 40px 48px;position:relative;overflow:hidden;margin-bottom:16px;}
+.hero-card::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 80% 50% at 15% 10%,rgba(116,23,23,.5) 0%,transparent 55%),radial-gradient(ellipse 60% 60% at 85% 90%,rgba(47,4,16,.6) 0%,transparent 50%);}
+.hc-obj{position:absolute;pointer-events:none;}
+.hc-cake{top:14px;right:26px;opacity:.55;}
+.hc-bow{bottom:14px;left:22px;opacity:.42;}
+.hc-champ{top:42%;right:16px;transform:translateY(-50%);opacity:.32;}
+
+.hero-card-inner{position:relative;z-index:2;}
+.invite-pill{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(242,196,206,.22);border-radius:var(--rpill);padding:7px 18px;margin-bottom:26px;}
+.invite-pill span{font-weight:600;font-size:8.5px;letter-spacing:.26em;text-transform:uppercase;color:rgba(242,196,206,.68);}
+.invite-pill-dot{width:4px;height:4px;border-radius:50%;background:var(--pink-mid);display:inline-block;}
+
+.hero-eyebrow{font-weight:500;font-size:clamp(14px,2.5vw,18px);color:rgba(242,196,206,.65);letter-spacing:.04em;margin-bottom:10px;}
+.hero-h1{font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:clamp(46px,9vw,82px);line-height:.9;color:var(--cream);letter-spacing:-.015em;margin-bottom:0;}
+.hero-h1 .num{color:var(--pink);font-style:italic;}
+.hero-h1 .bday{font-style:italic;}
+
+.hero-rule{display:flex;align-items:center;gap:10px;margin:22px auto 20px;max-width:340px;}
+.hero-rule-line{flex:1;height:1px;background:rgba(242,196,206,.14);}
+.hero-rule-txt{font-weight:700;font-size:8px;letter-spacing:.24em;text-transform:uppercase;color:rgba(242,196,206,.38);}
+
+/* body copy in its own soft card */
+.hero-body-card{background:rgba(255,255,255,.06);border:1px solid rgba(242,196,206,.1);border-radius:18px;padding:20px 24px;margin:0 auto 32px;max-width:420px;}
+.hero-body-card p{font-weight:500;font-size:clamp(13px,2vw,15px);color:rgba(255,255,255,.85);line-height:1.72;}
+
+/* countdown */
+.cdown{display:flex;gap:8px;justify-content:center;align-items:center;margin-bottom:28px;}
+.cd-unit{display:flex;flex-direction:column;align-items:center;gap:5px;}
+.cd-box{
+  background:rgba(255,255,255,.06);border:1px solid rgba(242,196,206,.14);border-radius:16px;
+  min-width:62px;padding:10px 8px 8px;text-align:center;
+  font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:36px;line-height:1;
+  color:var(--cream);letter-spacing:.02em;
+  animation:cdPulse 2s ease-in-out infinite;
+}
+@keyframes cdPulse{0%,100%{box-shadow:0 0 0 0 rgba(242,196,206,0);}50%{box-shadow:0 0 0 4px rgba(242,196,206,0.1);}}
+.cd-lbl{font-weight:700;font-size:7.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(242,196,206,.38);}
+.cd-sep{font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:26px;color:rgba(242,196,206,.18);line-height:1;padding-bottom:20px;animation:cdPulse 2s ease-in-out infinite;}
+
+/* CTA — juggle animation */
+.btn-rsvp-wrap{position:relative;display:inline-block;}
+.btn-rsvp{
+  display:inline-block;background:var(--pink);color:var(--wine-deep);
+  font-weight:900;font-size:13px;letter-spacing:.18em;text-transform:uppercase;
+  padding:20px 56px;border-radius:var(--rpill);border:none;cursor:pointer;
+  animation:juggle 2.4s ease-in-out infinite;
+  transition:background .22s ease,transform .1s;
+  position:relative;z-index:2;
+}
+@keyframes juggle{
+  0%,100%{transform:translateY(0) rotate(-.5deg);}
+  25%{transform:translateY(-4px) rotate(.5deg);}
+  50%{transform:translateY(-2px) rotate(-.3deg);}
+  75%{transform:translateY(-5px) rotate(.4deg);}
+}
+.btn-rsvp:hover{background:var(--pink-mid);animation:none;transform:scale(1.03);}
+
+/* mini pills */
+.p1-mini-row{width:100%;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px;}
+.mini-pill{background:var(--white);border-radius:20px;padding:18px 12px;text-align:center;border:1px solid rgba(176,139,145,.13);}
+.mini-pill-price{font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:26px;color:var(--wine-deep);line-height:1;margin-bottom:5px;}
+.mini-pill-lbl{font-weight:700;font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--mauve);}
+.p1-footer{font-weight:400;font-size:12.5px;color:var(--mauve);text-align:center;}
+
+/* ════════════════════
+   PAGE 2 — OFFER MENU
+════════════════════ */
+#p2{background:var(--cream);min-height:100vh;}
+.p2-topband{background:var(--pink);padding:30px 24px 90px;text-align:center;position:relative;}
+.p2-topband::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:65px;background:var(--cream);clip-path:ellipse(55% 100% at 50% 100%);}
+.p2-band-inner{position:relative;z-index:2;}
+.p2-nav{display:flex;justify-content:space-between;align-items:center;max-width:700px;margin:0 auto 32px;}
+.p2-kicker{font-weight:800;font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--wine);margin-bottom:12px;}
+.p2-h2{font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:clamp(36px,7vw,62px);line-height:.92;color:var(--wine-deep);margin-bottom:10px;}
+.p2-sub{font-weight:400;font-size:14px;color:var(--wine);}
+
+.p2-cards{max-width:700px;margin:0 auto;padding:0 20px 80px;display:flex;flex-direction:column;gap:14px;}
+
+/* ── offer card ── */
+.ocard{background:var(--white);border:1.5px solid rgba(176,139,145,.16);border-radius:var(--r-lg);overflow:hidden;transition:transform .22s ease,box-shadow .22s ease;cursor:pointer;position:relative;box-shadow:0 8px 32px rgba(47,4,16,.08),0 2px 8px rgba(47,4,16,.04);}
+.ocard:hover{transform:translateY(-4px);box-shadow:0 20px 56px rgba(47,4,16,.14),0 4px 16px rgba(47,4,16,.06);}
+.ocard.feat{border-color:var(--wine-deep);box-shadow:0 12px 48px rgba(47,4,16,.16),0 4px 16px rgba(47,4,16,.08);transform:scale(1.03);}
+.ocard.feat:hover{transform:scale(1.03) translateY(-4px);}
+/* strip wrapper no longer needed - card itself clips */
+.ocard-strip-wrap{display:contents;}
+
+/* p2 countdown at top */
+.p2-countdown{
+  display:flex;gap:8px;justify-content:center;align-items:center;
+  margin-bottom:20px;
+}
+.p2-cd-unit{display:flex;flex-direction:column;align-items:center;gap:4px;}
+.p2-cd-box{
+  background:var(--wine-deep);color:var(--cream);
+  border-radius:12px;min-width:52px;padding:8px 6px 6px;
+  text-align:center;font-family:'Playfair Display',Georgia,serif;
+  font-weight:900;font-size:28px;line-height:1;letter-spacing:.02em;
+}
+.p2-cd-lbl{font-weight:700;font-size:7px;letter-spacing:.2em;text-transform:uppercase;color:var(--wine);}
+.p2-cd-sep{font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:22px;color:var(--wine);line-height:1;padding-bottom:16px;}
+
+/* tier tag badges */
+.tier-tag{
+  display:inline-flex;align-items:center;gap:5px;
+  border-radius:var(--rpill);padding:4px 12px;
+  font-weight:800;font-size:8px;letter-spacing:.18em;text-transform:uppercase;
+  margin-bottom:8px;
+}
+.tier-tag-1{background:rgba(242,196,206,.25);color:var(--wine);}
+.tier-tag-2{background:var(--wine-deep);color:var(--pink);}
+.tier-tag-3{background:var(--black);color:var(--gold);}
+
+/* scattered birthday icons background on p2 */
+#p2-icons{
+  position:fixed;inset:0;pointer-events:none;z-index:0;
+  overflow:hidden;
+}
+#p2-icons svg{position:absolute;}
+.p2-cards,.p2-topband,.p2-band-inner,.p2-nav,.p2-footer{position:relative;z-index:1;}
+
+/* testimonial placeholder card — full width below p3 layout */
+.p3-testimonial-section{
+  background:var(--white);
+  border-top:1.5px solid rgba(176,139,145,.12);
+  padding:36px 20px 48px;
+}
+.p3-testimonial-inner{
+  max-width:900px;margin:0 auto;
+}
+.p3-testimonial-lbl{
+  font-weight:800;font-size:8px;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--caramel);margin-bottom:16px;text-align:center;
+}
+.p3-testimonial-placeholder{
+  background:var(--cream2);border-radius:16px;
+  height:140px;display:flex;align-items:center;justify-content:center;
+  border:2px dashed rgba(176,139,145,.3);
+}
+.p3-testimonial-placeholder span{
+  font-weight:600;font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--mauve);
+}
+.p3-testimonial-img{
+  width:100%;border-radius:16px;display:block;
+}
+.ocard-strip{height:5px;}
+.ocard-s1{background:var(--pink);}                           /* $33 — lightest pink */
+.ocard-s2{background:var(--pink-mid);}                       /* $333 — mid pink */
+.ocard-s3{background:linear-gradient(90deg,var(--wine-deep),var(--wine));}  /* $3333 — wine */
+
+.ocard-inner{display:grid;grid-template-columns:1fr auto;gap:20px;padding:28px 28px 32px;align-items:start;}
+.ocard-label-row{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+.ocard-label-txt{font-weight:800;font-size:8.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--caramel);}
+.ocard-label-line{height:1px;width:24px;background:rgba(141,105,93,.25);}
+
+.ocard-price{font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:clamp(36px,6.5vw,56px);line-height:.88;color:var(--wine-deep);margin-bottom:4px;}
+.ocard-price-mo{font-family:'DM Sans',Helvetica,Arial,sans-serif;font-weight:700;font-size:.35em;color:var(--caramel);vertical-align:baseline;letter-spacing:.02em;}
+.ocard-price-note{font-weight:400;font-size:11.5px;color:var(--mauve);margin-bottom:10px;display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
+.norm-price{font-weight:700;font-size:11px;color:var(--mauve);text-decoration:line-through;}
+.birthday-rate{font-weight:700;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--wine);background:rgba(242,196,206,.3);padding:2px 8px;border-radius:6px;}
+
+.ocard-tier{font-weight:800;font-size:17px;color:var(--wine-deep);margin-bottom:3px;letter-spacing:-.01em;}
+.ocard-tagline{font-weight:400;font-size:13px;color:var(--caramel);margin-bottom:16px;}
+.ocard-incl{list-style:none;display:flex;flex-direction:column;gap:7px;}
+.ocard-incl li{font-weight:400;font-size:13px;color:var(--cherry);display:flex;align-items:flex-start;gap:8px;line-height:1.35;}
+.ocard-incl li::before{content:'→';font-weight:800;font-size:11px;color:var(--wine);margin-top:1px;flex-shrink:0;}
+
+/* WMHQ note */
+.wmhq-note{margin-top:10px;display:inline-flex;align-items:center;gap:6px;background:var(--pink-soft);border:1px solid rgba(242,196,206,.5);border-radius:10px;padding:6px 12px;}
+.wmhq-note span{font-weight:700;font-size:8.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--wine);}
+
+/* $3333 crossout */
+.price-strike-wrap{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:4px;}
+.price-strike{font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:clamp(18px,3vw,26px);color:var(--mauve);text-decoration:line-through;line-height:1;}
+
+/* CTA — bottom right, prominent */
+.ocard-right{display:flex;flex-direction:column;align-items:flex-end;gap:12px;padding-top:2px;}
+.scarcity-pill{display:inline-flex;align-items:center;gap:5px;background:var(--pink-soft);border:1px solid rgba(240,156,174,.3);border-radius:var(--rpill);padding:5px 11px;font-weight:800;font-size:8px;letter-spacing:.15em;text-transform:uppercase;color:var(--wine);white-space:nowrap;}
+.btn-ocard{
+  background:var(--wine-deep);color:var(--cream);border:none;border-radius:var(--rpill);
+  font-weight:800;font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+  padding:16px 24px;cursor:pointer;transition:all .22s ease;white-space:nowrap;
+  margin-top:auto;
+  box-shadow:0 4px 18px rgba(47,4,16,.18);
+}
+.btn-ocard:hover{background:var(--wine);transform:translateY(-2px);box-shadow:0 10px 28px rgba(47,4,16,.25);}
+.ocard-illus{margin-top:4px;opacity:.38;}
+
+.p2-footer{text-align:center;padding:0 20px 60px;font-weight:400;font-size:12.5px;color:var(--mauve);}
+
+/* $333 card jiggle */
+.ocard.feat{animation:cardJiggle 4s ease-in-out infinite;}
+@keyframes cardJiggle{0%,100%{transform:rotate(0deg);}92%{transform:rotate(0deg);}94%{transform:rotate(-.4deg);}96%{transform:rotate(.4deg);}98%{transform:rotate(-.3deg);}99%{transform:rotate(.2deg);}}
+.ocard.feat:hover{animation:none;transform:translateY(-3px);}
+
+/* payment plan toggle on cc */
+.cc-plan-toggle{margin:0 24px 16px;border:1px solid rgba(242,196,206,.15);border-radius:16px;overflow:hidden;}
+.cc-plan-header{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;cursor:pointer;background:rgba(255,255,255,.04);transition:background .18s;}
+.cc-plan-header:hover{background:rgba(255,255,255,.07);}
+.cc-plan-header-txt{font-weight:700;font-size:12px;color:rgba(242,196,206,.7);}
+.cc-plan-chevron{font-size:12px;color:var(--pink);transition:transform .25s;display:inline-block;}
+.cc-plan-toggle.open .cc-plan-chevron{transform:rotate(180deg);}
+.cc-plan-body{max-height:0;overflow:hidden;transition:max-height .3s ease;}
+.cc-plan-toggle.open .cc-plan-body{max-height:200px;}
+.cc-plan-body-inner{padding:14px 16px 16px;border-top:1px solid rgba(242,196,206,.1);}
+.cc-plan-body-inner p{font-weight:400;font-size:12px;color:rgba(242,196,206,.55);line-height:1.6;margin-bottom:10px;}
+.btn-plan{display:block;width:100%;background:rgba(242,196,206,.12);color:var(--pink);border:1px solid rgba(242,196,206,.2);border-radius:var(--rpill);font-weight:800;font-size:9px;letter-spacing:.18em;text-transform:uppercase;padding:14px 24px;cursor:pointer;text-align:center;transition:all .22s;}
+.btn-plan:hover{background:rgba(242,196,206,.2);}
+
+/* T&Cs accordion at bottom of p3 */
+.p3-tc-accord{margin-top:14px;border:1.5px solid rgba(176,139,145,.18);border-radius:16px;overflow:hidden;}
+.p3-tc-header{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;cursor:pointer;background:var(--white);transition:background .18s;}
+.p3-tc-header:hover{background:var(--pink-soft);}
+.p3-tc-header-txt{font-weight:700;font-size:13px;color:var(--wine-deep);}
+.p3-tc-chevron{font-size:14px;color:var(--wine);transition:transform .25s;display:inline-block;}
+.p3-tc-accord.open .p3-tc-chevron{transform:rotate(180deg);}
+.p3-tc-body{max-height:0;overflow:hidden;transition:max-height .35s ease;}
+.p3-tc-accord.open .p3-tc-body{max-height:400px;}
+.p3-tc-body-inner{padding:16px 18px 18px;background:var(--white);border-top:1px solid rgba(176,139,145,.12);}
+.p3-tc-body-inner p{font-weight:400;font-size:13px;color:var(--cherry);line-height:1.7;}
+.p3-tc-body-inner a{color:var(--wine);font-weight:600;}
+
+/* ════════════════════
+   PAGE 3 — CHECKOUT
+════════════════════ */
+#p3{background:var(--pink-soft);min-height:100vh;}
+.p3-topbar{background:var(--black);padding:16px 28px;display:flex;align-items:center;gap:16px;position:sticky;top:0;z-index:100;}
+.p3-logo{font-weight:900;font-size:15px;letter-spacing:.02em;color:var(--cream);flex:1;}
+.p3-mini-timer{font-weight:700;font-size:14px;color:var(--pink);letter-spacing:.04em;}
+.p3-mini-timer .lbl{font-weight:500;font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:var(--mauve);margin-right:6px;vertical-align:middle;}
+
+.p3-body{max-width:900px;margin:0 auto;padding:48px 20px 80px;display:grid;grid-template-columns:1fr 340px;gap:36px;align-items:start;}
+
+.p3-left{}
+.offer-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px;}
+.otab{background:var(--white);border:1.5px solid rgba(176,139,145,.2);border-radius:var(--rpill);padding:8px 16px;font-weight:700;font-size:8.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--caramel);cursor:pointer;transition:all .2s;}
+.otab.active,.otab:hover{background:var(--wine-deep);border-color:var(--wine-deep);color:var(--cream);}
+
+.p3-kicker-lbl{font-weight:800;font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--caramel);margin-bottom:10px;}
+.p3-h{font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:clamp(32px,6vw,50px);line-height:.9;color:var(--wine-deep);margin-bottom:6px;}
+.p3-h small{display:block;font-family:'DM Sans',Helvetica,Arial,sans-serif;font-weight:500;font-size:.42em;color:var(--caramel);line-height:2.2;}
+.p3-price{font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:clamp(48px,9vw,74px);color:var(--cherry);line-height:1;margin-bottom:4px;}
+.p3-price-note{font-weight:400;font-size:12px;color:var(--mauve);margin-bottom:22px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+
+/* inclusions card */
+.p3-incl-card{background:var(--white);border:1.5px solid rgba(176,139,145,.15);border-radius:22px;padding:22px 24px 26px;margin-bottom:14px;}
+.p3-incl-lbl{font-weight:800;font-size:8px;letter-spacing:.28em;text-transform:uppercase;color:var(--caramel);margin-bottom:14px;}
+.p3-incl-list{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.p3-incl-list li{font-weight:400;font-size:14px;color:var(--cherry);display:flex;align-items:flex-start;gap:9px;line-height:1.4;padding-bottom:9px;border-bottom:1px solid rgba(176,139,145,.1);}
+.p3-incl-list li:last-child{border-bottom:none;padding-bottom:0;}
+.p3-incl-list li::before{content:'→';font-weight:800;font-size:10px;color:var(--wine);margin-top:2px;flex-shrink:0;}
+.p3-incl-list li{flex-direction:column;align-items:flex-start;gap:2px;}
+.p3-incl-list li>span:first-child{display:flex;align-items:flex-start;gap:9px;}
+.p3-incl-list li>span:first-child::before{content:'→';font-weight:800;font-size:10px;color:var(--wine);margin-top:2px;flex-shrink:0;}
+.p3-incl-list li::before{display:none;}
+.incl-desc{font-size:11.5px;color:var(--mauve);font-weight:400;line-height:1.4;padding-left:18px;}
+
+/* accordion */
+.accord-item{border:1.5px solid rgba(176,139,145,.18);border-radius:16px;overflow:hidden;margin-top:10px;}
+.accord-header{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;cursor:pointer;background:var(--white);transition:background .18s;}
+.accord-header:hover{background:var(--pink-soft);}
+.accord-header-txt{font-weight:700;font-size:13px;color:var(--wine-deep);}
+.accord-chevron{font-size:14px;color:var(--wine);transition:transform .25s;display:inline-block;}
+.accord-item.open .accord-chevron{transform:rotate(180deg);}
+.accord-body{max-height:0;overflow:hidden;transition:max-height .35s ease;}
+.accord-item.open .accord-body{max-height:600px;}
+.accord-body-inner{padding:16px 18px 18px;background:var(--white);border-top:1px solid rgba(176,139,145,.12);}
+.accord-body-inner ul{list-style:none;display:flex;flex-direction:column;gap:7px;}
+.accord-body-inner ul li{font-weight:400;font-size:13px;color:var(--cherry);display:flex;align-items:flex-start;gap:8px;line-height:1.4;}
+.accord-body-inner ul li::before{content:'→';font-weight:800;font-size:10px;color:var(--wine);margin-top:1px;flex-shrink:0;}
+.accord-body-inner p{font-weight:400;font-size:13px;color:var(--cherry);line-height:1.6;}
+
+/* urgency */
+.p3-urgency{background:var(--pink);border-radius:16px;padding:14px 18px;}
+.p3-urgency p{font-weight:500;font-size:13px;color:var(--wine-deep);line-height:1.5;}
+
+/* checkout card */
+.cc{background:var(--wine-deep);border-radius:28px;overflow:hidden;position:sticky;top:88px;}
+.cc-top{padding:26px 24px 20px;border-bottom:1px solid rgba(242,196,206,.1);}
+.cc-kicker{font-weight:800;font-size:8px;letter-spacing:.28em;text-transform:uppercase;color:rgba(242,196,206,.38);margin-bottom:8px;}
+.cc-tier{font-weight:900;font-size:20px;color:var(--cream);margin-bottom:3px;letter-spacing:-.01em;}
+.cc-tagline{font-weight:400;font-size:12px;color:rgba(242,196,206,.48);}
+.cc-lines{padding:18px 24px 0;}
+.cc-line{display:flex;justify-content:space-between;font-weight:400;font-size:13px;color:rgba(242,196,206,.55);padding:8px 0;border-bottom:1px solid rgba(242,196,206,.07);}
+.cc-line:last-child{border-bottom:none;}
+.cc-line.total{font-weight:800;font-size:16px;color:var(--cream);border-top:1px solid rgba(242,196,206,.14);border-bottom:none;padding-top:14px;margin-top:4px;}
+.cc-line.total .amt{font-family:'Playfair Display',Georgia,serif;font-size:22px;color:var(--pink);}
+.cc-xout{display:flex;align-items:center;gap:6px;padding:6px 0 0;font-weight:400;font-size:11px;color:rgba(242,196,206,.3);}
+.cc-xout .x{text-decoration:line-through;color:rgba(242,196,206,.25);}
+.cc-xout .love{color:var(--pink);}
+.cc-bottom{padding:18px 24px 26px;}
+.cc-secure{display:flex;align-items:center;gap:5px;font-weight:700;font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:rgba(242,196,206,.22);margin-bottom:12px;}
+.cc-secure::before{content:'🔒';font-size:9px;}
+.btn-checkout{display:block;width:100%;background:var(--pink);color:var(--wine-deep);border:none;border-radius:var(--rpill);font-weight:900;font-size:12px;letter-spacing:.16em;text-transform:uppercase;padding:18px 24px;cursor:pointer;transition:all .22s ease;text-align:center;margin-bottom:12px;}
+.btn-checkout:hover{background:var(--pink-mid);transform:translateY(-1px);box-shadow:0 10px 26px rgba(0,0,0,.18);}
+.cc-note{font-weight:400;font-size:11px;color:rgba(242,196,206,.26);text-align:center;line-height:1.55;}
+
+/* upsell box inside cc */
+.cc-upsell{
+  margin:14px 0 0;
+  border:1.5px solid rgba(242,196,206,.18);
+  border-radius:18px;
+  overflow:hidden;
+  transition:all .3s ease;
+}
+.cc-upsell-header{
+  display:flex;align-items:center;gap:10px;
+  padding:12px 16px;cursor:pointer;
+  background:rgba(255,255,255,.05);
+}
+.cc-upsell-toggle{
+  width:36px;height:20px;border-radius:10px;
+  background:rgba(242,196,206,.18);
+  position:relative;flex-shrink:0;
+  transition:background .25s;cursor:pointer;
+}
+.cc-upsell-toggle-dot{
+  position:absolute;top:3px;left:3px;
+  width:14px;height:14px;border-radius:50%;
+  background:rgba(242,196,206,.5);
+  transition:transform .25s, background .25s;
+}
+.cc-upsell.active .cc-upsell-toggle{background:var(--pink);}
+.cc-upsell.active .cc-upsell-toggle-dot{transform:translateX(16px);background:var(--wine-deep);}
+.cc-upsell-header-txt{
+  flex:1;
+  font-weight:800;font-size:11px;color:var(--cream);letter-spacing:.01em;
+}
+.cc-upsell-price-row{
+  display:flex;align-items:center;gap:6px;flex-shrink:0;
+}
+.cc-upsell-price-new{
+  font-family:'Playfair Display',Georgia,serif;
+  font-weight:900;font-size:16px;color:var(--pink);
+}
+.cc-upsell-price-old{
+  font-weight:400;font-size:10px;color:rgba(242,196,206,.35);
+  text-decoration:line-through;
+}
+.cc-upsell-body{
+  max-height:0;overflow:hidden;transition:max-height .35s ease;
+}
+.cc-upsell.open .cc-upsell-body{max-height:300px;}
+.cc-upsell-body-inner{
+  padding:4px 16px 16px;
+  border-top:1px solid rgba(242,196,206,.1);
+}
+.cc-upsell-body-inner p{
+  font-weight:400;font-size:12px;color:rgba(242,196,206,.6);
+  line-height:1.65;margin-bottom:12px;
+}
+.btn-upsell{
+  display:block;width:100%;
+  background:var(--pink);color:var(--wine-deep);
+  border:none;border-radius:var(--rpill);
+  font-weight:900;font-size:10px;letter-spacing:.18em;text-transform:uppercase;
+  padding:14px 18px;cursor:pointer;text-align:center;
+  transition:all .22s;margin-bottom:8px;
+}
+.btn-upsell:hover{background:var(--pink-mid);}
+.btn-upsell-skip{
+  display:block;width:100%;background:none;border:none;
+  font-weight:500;font-size:11px;color:rgba(242,196,206,.3);
+  cursor:pointer;text-align:center;padding:4px;
+  transition:color .2s;
+}
+.btn-upsell-skip:hover{color:rgba(242,196,206,.55);}
+
+/* social proof toast */
+.sp-toast{
+  position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(20px);
+  background:var(--white);
+  border:1.5px solid rgba(176,139,145,.2);
+  border-radius:var(--rpill);
+  padding:12px 22px;
+  display:flex;align-items:center;gap:10px;
+  box-shadow:0 8px 32px rgba(47,4,16,.12);
+  z-index:5000;
+  opacity:0;
+  transition:opacity .5s ease, transform .5s ease;
+  pointer-events:none;
+  white-space:nowrap;
+}
+.sp-toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+.sp-dot{width:8px;height:8px;border-radius:50%;background:var(--wine);flex-shrink:0;animation:pulse 1.4s infinite;}
+.sp-txt{font-weight:600;font-size:13px;color:var(--cherry);}
+.sp-txt span{font-weight:800;color:var(--wine);}
+
+/* responsive */
+@media(max-width:700px){
+  .ocard-inner{grid-template-columns:1fr;}
+  .ocard-right{flex-direction:row;align-items:center;flex-wrap:wrap;}
+  .p3-body{grid-template-columns:1fr;}
+  .cc{position:static;}
+  .p1-mini-row{grid-template-columns:1fr;}
+  .hero-card{padding:38px 24px 40px;}
+
+  /* envelope */
+  #env-box{height:200px;}
+  #env-tap{font-size:10px;}
+
+  /* landing hero */
+  .hero-h1{font-size:clamp(40px,14vw,72px);}
+  .cd-box{min-width:50px;font-size:28px;padding:8px 6px 6px;}
+  .btn-rsvp{padding:16px 36px;font-size:11px;}
+  .p1-mini-row{grid-template-columns:repeat(3,1fr);}
+  .mini-pill-price{font-size:20px;}
+  .mini-pill-lbl{font-size:7px;}
+
+  /* offer page */
+  .p2-topband{padding:24px 16px 80px;}
+  .p2-h2{font-size:clamp(28px,9vw,48px);}
+  .p2-cards{padding:0 14px 60px;}
+  .p2-countdown{gap:6px;}
+  .p2-cd-box{min-width:42px;font-size:22px;padding:6px 4px 5px;}
+  .p2-heading-pill{padding:8px 18px;}
+  .ocard-inner{padding:20px 20px 24px;gap:14px;}
+  .ocard-price{font-size:clamp(32px,9vw,50px);}
+  .ocard-right{justify-content:flex-start;}
+  .btn-ocard{font-size:9px;padding:12px 18px;}
+  .tier-tag{font-size:7.5px;padding:3px 10px;}
+
+  /* checkout page */
+  .p3-topbar{padding:12px 16px;}
+  .p3-body{padding:28px 14px 60px;gap:24px;}
+  .p3-h{font-size:clamp(28px,8vw,44px);}
+  .p3-price{font-size:clamp(40px,12vw,64px);}
+  .p3-incl-card{padding:18px 18px 20px;}
+  .p3-incl-list li{font-size:13px;}
+  .offer-tabs{gap:6px;}
+  .otab{font-size:7.5px;padding:6px 12px;}
+  .cc{border-radius:20px;}
+  .cc-top{padding:22px 20px 16px;}
+  .cc-tier{font-size:17px;}
+  .cc-lines{padding:14px 20px 0;}
+  .cc-bottom{padding:14px 20px 22px;}
+  .btn-checkout{font-size:10px;padding:16px 18px;}
+  .cc-upsell-header{flex-wrap:wrap;gap:8px;}
+  .cc-upsell-price-row{flex-basis:100%;}
+  .p3-testimonial-section{padding:24px 14px 36px;}
+
+  /* accordions */
+  .accord-header-txt{font-size:12px;}
+  .p3-tc-header-txt{font-size:12px;}
+
+  /* social proof toast */
+  .sp-toast{white-space:normal;text-align:center;width:calc(100% - 32px);left:16px;right:16px;transform:translateY(20px);border-radius:16px;}
+  .sp-toast.show{transform:translateY(0);}
+}
+
+/* ── ALWAYS PINK CTAs — no override ever ── */
+.btn-ocard,.btn-rsvp,.btn-checkout,.btn-plan{background:var(--pink)!important;color:var(--wine-deep)!important;}
+.btn-ocard{background:var(--wine-deep)!important;color:var(--cream)!important;}
+.btn-rsvp{background:var(--pink)!important;color:var(--wine-deep)!important;}
+.btn-checkout{background:var(--pink)!important;color:var(--wine-deep)!important;}
+.btn-checkout:hover{background:var(--pink-mid)!important;}
+.btn-checkout.plan-selected{background:var(--pink)!important;color:var(--wine-deep)!important;}
+
+/* ── ENVELOPE OVERLAY ── completely separate from pages ── */
+#env-overlay{
+  position:fixed;inset:0;z-index:8000;
+  background:var(--pink-soft);
+  display:flex;align-items:center;justify-content:center;
+  padding:32px 20px;
+  transition:opacity 1s ease;
+}
+#env-overlay.hide{opacity:0;pointer-events:none;}
+
+#env-stage{
+  display:flex;flex-direction:column;align-items:center;gap:20px;
+  width:100%;max-width:420px;
+}
+
+/* tap prompt — ABOVE envelope */
+#env-tap{
+  font-family:'DM Sans',Helvetica,Arial,sans-serif;
+  font-weight:700;font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--wine);
+  background:none;border:none;cursor:pointer;
+  animation:tapPulse 2s ease-in-out infinite;
+  order:-1;
+}
+@keyframes tapPulse{0%,100%{opacity:1;}50%{opacity:.5;}}
+@keyframes sealPulse{0%,100%{filter:drop-shadow(0 3px 10px rgba(47,4,16,.28));}50%{filter:drop-shadow(0 6px 20px rgba(116,23,23,.45));}}
+
+/* envelope wrapper */
+#env-box{
+  width:100%;
+  position:relative;
+  height:260px;
+  filter:drop-shadow(0 16px 40px rgba(47,4,16,.14));
+}
+
+/* plain cream back */
+#env-back{position:absolute;inset:0;background:#F0E9DA;border-radius:12px;border:1px solid rgba(176,139,145,.2);}
+
+/* side flaps — slightly darker cream */
+#env-fl{position:absolute;top:0;left:0;bottom:0;width:50%;background:#E8DFCF;clip-path:polygon(0 0,100% 50%,0 100%);border-radius:12px 0 0 12px;}
+#env-fr{position:absolute;top:0;right:0;bottom:0;width:50%;background:#E8DFCF;clip-path:polygon(100% 0,0 50%,100% 100%);border-radius:0 12px 12px 0;}
+#env-fb{position:absolute;bottom:0;left:0;right:0;height:55%;background:#EDE5D5;clip-path:polygon(0 100%,50% 0%,100% 100%);border-radius:0 0 12px 12px;}
+
+/* front face — covers card until it rises */
+#env-face{position:absolute;inset:2px;background:#FAF6EF;border-radius:10px;z-index:4;}
+
+/* top flap — 3D fold open */
+#env-ft{
+  position:absolute;top:0;left:0;right:0;height:52%;
+  z-index:10;
+  transform-origin:50% 0%;
+  transform-style:preserve-3d;
+  transform:perspective(800px) rotateX(0deg);
+  transition:transform 1.6s cubic-bezier(.4,0,.2,1);
+}
+#env-ft-face{
+  width:100%;height:100%;
+  background:#EBE2D2;
+  clip-path:polygon(0 0,50% 100%,100% 0);
+  border-radius:12px 12px 0 0;
+  backface-visibility:hidden;
+}
+#env-ft.open{transform:perspective(800px) rotateX(-185deg);}
+
+/* wax seal */
+#env-seal{
+  position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  z-index:15;
+  width:72px;height:72px;
+  transition:transform .6s cubic-bezier(.4,0,.2,1), opacity .5s ease;
+  filter:drop-shadow(0 3px 10px rgba(47,4,16,.28));
+}
+#env-seal.pop{transform:translate(-50%,-50%) scale(0) rotate(25deg);opacity:0;}
+
+/* invitation card inside envelope */
+#env-card{
+  position:absolute;left:8%;right:8%;bottom:4px;top:30px;
+  z-index:3;border-radius:8px;overflow:hidden;
+  transform:translateY(0);
+  transition:transform 1.4s cubic-bezier(.16,1,.3,1);
+}
+#env-card.rise{transform:translateY(-112%);}
+#env-card-face{
+  width:100%;height:100%;
+  background:var(--wine-deep);
+  border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+}
+#env-card-face::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 80% 50% at 20% 15%,rgba(116,23,23,.6) 0%,transparent 55%);
+}
+#env-card-face p{
+  font-family:'Playfair Display',Georgia,serif;
+  font-weight:900;font-size:clamp(16px,4vw,24px);
+  color:var(--cream);line-height:1.1;text-align:center;
+  position:relative;z-index:2;letter-spacing:-.01em;
+}
+#env-card-face p span{color:var(--pink);}
+#env-card-face p em{font-style:italic;}
+
+/* inclusions desc */
+.incl-name{display:block;font-weight:500;font-size:13px;color:var(--cherry);}
+.incl-desc{display:block;font-size:11px;color:var(--mauve);margin-top:2px;line-height:1.4;font-weight:400;}
+
+/* offer page heading rounded card */
+.p2-heading-pill{
+  display:inline-block;
+  background:rgba(255,255,255,.55);
+  border:1.5px solid rgba(116,23,23,.18);
+  border-radius:var(--rpill);
+  padding:10px 24px;
+  margin-bottom:14px;
+}
+.p2-heading-pill span{
+  font-family:'DM Sans',Helvetica,Arial,sans-serif;
+  font-weight:900;font-size:clamp(14px,3vw,20px);
+  color:var(--wine-deep);letter-spacing:-.01em;
+}
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════
+   ENVELOPE OVERLAY — independent of all pages
+════════════════════════════════ -->
+<div id="env-overlay">
+  <div id="env-stage">
+    <button id="env-tap">Click JP to open your invite</button>
+    <div id="env-box">
+      <div id="env-back"></div>
+      <div id="env-fl"></div>
+      <div id="env-fr"></div>
+      <div id="env-fb"></div>
+      <div id="env-face"></div>
+      <div id="env-ft"><div id="env-ft-face"></div></div>
+      <!-- invitation card inside envelope, hidden behind face -->
+      <div id="env-card">
+        <div id="env-card-face">
+          <p>JP's <span>33rd</span><br><em>Birthday</em><br>Guest List</p>
+        </div>
+      </div>
+      <!-- wax seal — clickable -->
+      <div id="env-seal" onclick="openEnvelope()" style="cursor:pointer;">
+        <svg viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="36" cy="38" rx="32" ry="28" fill="#741717"/>
+          <ellipse cx="23" cy="50" rx="8" ry="6" fill="#741717"/>
+          <ellipse cx="49" cy="52" rx="7" ry="5.5" fill="#741717"/>
+          <ellipse cx="36" cy="56" rx="5" ry="4" fill="#741717"/>
+          <circle cx="36" cy="34" r="27" fill="#3C050F"/>
+          <circle cx="36" cy="34" r="23" fill="none" stroke="rgba(242,196,206,0.3)" stroke-width="1.4"/>
+          <text x="36" y="42" text-anchor="middle" font-family="Georgia,serif" font-size="20" font-weight="700" fill="#F2C4CE" letter-spacing="2">JP</text>
+          <circle cx="36" cy="12" r="1.4" fill="rgba(242,196,206,0.35)"/>
+          <circle cx="58" cy="22" r="1.4" fill="rgba(242,196,206,0.35)"/>
+          <circle cx="58" cy="46" r="1.4" fill="rgba(242,196,206,0.35)"/>
+          <circle cx="36" cy="56" r="1.4" fill="rgba(242,196,206,0.35)"/>
+          <circle cx="14" cy="46" r="1.4" fill="rgba(242,196,206,0.35)"/>
+          <circle cx="14" cy="22" r="1.4" fill="rgba(242,196,206,0.35)"/>
+        </svg>
+      </div>
+    </div><!-- /env-box -->
+  </div>
+</div>
+
+<!-- CONFETTI -->
+<canvas id="confetti-canvas"></canvas>
+
+<!-- ════════════════
+   PAGE 1 — LANDING
+════════════════ -->
+<div class="page active" id="p1">
+  <div class="p1-top">
+    <div class="p1-top-brand">JESSICA PINILI</div>
+    <div class="p1-top-tag">33rd Birthday · 7 Days Only</div>
+  </div>
+  <div class="p1-hero">
+
+    <div class="hero-card">
+      <!-- illus -->
+      <div class="hc-obj hc-cake">
+        <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
+          <rect x="17" y="6" width="2.5" height="8" rx="1.25" stroke="rgba(242,196,206,0.52)" stroke-width="1.1"/>
+          <rect x="24.75" y="4" width="2.5" height="10" rx="1.25" stroke="rgba(242,196,206,0.52)" stroke-width="1.1"/>
+          <rect x="32.5" y="6" width="2.5" height="8" rx="1.25" stroke="rgba(242,196,206,0.52)" stroke-width="1.1"/>
+          <ellipse cx="18.25" cy="5" rx="1.7" ry="2.2" fill="rgba(201,145,74,0.62)"/>
+          <ellipse cx="26" cy="3" rx="1.7" ry="2.2" fill="rgba(201,145,74,0.62)"/>
+          <ellipse cx="33.75" cy="5" rx="1.7" ry="2.2" fill="rgba(201,145,74,0.62)"/>
+          <rect x="10" y="18" width="32" height="10" rx="3" stroke="rgba(242,196,206,0.38)" stroke-width="1.2"/>
+          <rect x="7" y="28" width="38" height="12" rx="3" stroke="rgba(242,196,206,0.38)" stroke-width="1.2"/>
+          <circle cx="19" cy="23.5" r="1.2" fill="rgba(242,196,206,0.28)"/>
+          <circle cx="26" cy="23.5" r="1.2" fill="rgba(242,196,206,0.28)"/>
+          <circle cx="33" cy="23.5" r="1.2" fill="rgba(242,196,206,0.28)"/>
+        </svg>
+      </div>
+      <div class="hc-obj hc-bow">
+        <svg width="44" height="30" viewBox="0 0 44 30" fill="none">
+          <path d="M22 15 C16 11 5 5 6 13 C7 19 16 18 22 15Z" stroke="rgba(242,196,206,0.42)" stroke-width="1.2"/>
+          <path d="M22 15 C28 11 39 5 38 13 C37 19 28 18 22 15Z" stroke="rgba(242,196,206,0.42)" stroke-width="1.2"/>
+          <path d="M22 15 L17 27" stroke="rgba(242,196,206,0.28)" stroke-width="1.1" stroke-linecap="round"/>
+          <path d="M22 15 L27 27" stroke="rgba(242,196,206,0.28)" stroke-width="1.1" stroke-linecap="round"/>
+          <circle cx="22" cy="15" r="2.8" stroke="rgba(242,196,206,0.48)" stroke-width="1.1"/>
+        </svg>
+      </div>
+      <div class="hc-obj hc-champ">
+        <svg width="32" height="58" viewBox="0 0 32 58" fill="none">
+          <path d="M8 4 L24 4 L20 24 L12 24 Z" stroke="rgba(242,196,206,0.32)" stroke-width="1.2" stroke-linejoin="round"/>
+          <line x1="12" y1="24" x2="16" y2="44" stroke="rgba(242,196,206,0.28)" stroke-width="1.2"/>
+          <line x1="20" y1="24" x2="16" y2="44" stroke="rgba(242,196,206,0.28)" stroke-width="1.2"/>
+          <line x1="10" y1="44" x2="22" y2="44" stroke="rgba(242,196,206,0.32)" stroke-width="1.2" stroke-linecap="round"/>
+          <circle cx="14" cy="13" r="1.1" fill="rgba(242,196,206,0.25)"/>
+          <circle cx="17" cy="9" r=".9" fill="rgba(242,196,206,0.2)"/>
+        </svg>
+      </div>
+
+      <div class="hero-card-inner">
+        <div class="invite-pill">
+          <span class="invite-pill-dot"></span>
+          <span>A Private Birthday Invitation</span>
+          <span class="invite-pill-dot"></span>
+        </div>
+        <div class="hero-eyebrow">You're invited.</div>
+        <h1 class="hero-h1">JP's<br><span class="num">33rd</span><br><span class="bday">Birthday</span><br>Guest List</h1>
+        <div class="hero-rule">
+          <div class="hero-rule-line"></div>
+          <div class="hero-rule-txt">Live: May 25th – 31st 2026</div>
+          <div class="hero-rule-line"></div>
+        </div>
+        <div class="hero-body-card">
+          <p>7 days. 3 price points. No extensions. The 33rd Birthday Guest List is the only time you'll access two powerful masterclasses for $33, a full WMHQ membership at the birthday rate, or a private 8-week intensive at a fraction of what it is.</p>
+        </div>
+        <div class="cdown">
+          <div class="cd-unit"><div class="cd-box" id="cd-d">07</div><div class="cd-lbl">Days</div></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-unit"><div class="cd-box" id="cd-h">00</div><div class="cd-lbl">Hrs</div></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-unit"><div class="cd-box" id="cd-m">00</div><div class="cd-lbl">Min</div></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-unit"><div class="cd-box" id="cd-s">00</div><div class="cd-lbl">Sec</div></div>
+        </div>
+        <div class="btn-rsvp-wrap">
+          <button class="btn-rsvp" id="rsvp-btn" onclick="fireConfetti()">Click To RSVP</button>
+        </div>
+      </div>
+    </div><!-- /hero-card -->
+
+    <div class="p1-mini-row">
+      <div class="mini-pill"><div class="mini-pill-price">$33</div><div class="mini-pill-lbl">Learn from me</div></div>
+      <div class="mini-pill"><div class="mini-pill-price">$333</div><div class="mini-pill-lbl">Be in the room</div></div>
+      <div class="mini-pill"><div class="mini-pill-price">$3333</div><div class="mini-pill-lbl">Work privately</div></div>
+    </div>
+    <p class="p1-footer">No spam. No endless upsells. Just the offer, the window, and you.</p>
+  </div>
+</div>
+
+<!-- ════════════════
+   PAGE 2 — OFFERS
+════════════════ -->
+<div class="page" id="p2">
+  <div class="p2-topband">
+    <div class="p2-band-inner">
+      <div class="p2-nav">
+        <button class="btn-back" onclick="goTo('p1')">Back</button>
+        <div class="lbl" style="color:var(--wine);">7 Days Only</div>
+      </div>
+      <div class="p2-kicker">Choose your level of access</div>
+      <div class="p2-heading-pill"><span>JP's 33rd Birthday Access</span></div>
+      <p class="p2-sub" style="margin-bottom:20px;">Pick the seat that's yours. Every level closes when the 7 days end.</p>
+      <div class="p2-countdown">
+        <div class="p2-cd-unit"><div class="p2-cd-box" id="p2-cd-d">07</div><div class="p2-cd-lbl">Days</div></div>
+        <div class="p2-cd-sep">:</div>
+        <div class="p2-cd-unit"><div class="p2-cd-box" id="p2-cd-h">00</div><div class="p2-cd-lbl">Hrs</div></div>
+        <div class="p2-cd-sep">:</div>
+        <div class="p2-cd-unit"><div class="p2-cd-box" id="p2-cd-m">00</div><div class="p2-cd-lbl">Min</div></div>
+        <div class="p2-cd-sep">:</div>
+        <div class="p2-cd-unit"><div class="p2-cd-box" id="p2-cd-s">00</div><div class="p2-cd-lbl">Sec</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- scattered birthday icons background -->
+  <div id="p2-icons">
+    <!-- cake top left -->
+    <svg style="top:8%;left:3%;opacity:.13;width:56px;" viewBox="0 0 52 52" fill="none"><rect x="17" y="6" width="2.5" height="8" rx="1.25" stroke="#741717" stroke-width="1.8"/><rect x="24.75" y="4" width="2.5" height="10" rx="1.25" stroke="#741717" stroke-width="1.8"/><rect x="32.5" y="6" width="2.5" height="8" rx="1.25" stroke="#741717" stroke-width="1.8"/><ellipse cx="18.25" cy="5" rx="1.7" ry="2.2" fill="#C4914A"/><ellipse cx="26" cy="3" rx="1.7" ry="2.2" fill="#C4914A"/><ellipse cx="33.75" cy="5" rx="1.7" ry="2.2" fill="#C4914A"/><rect x="10" y="18" width="32" height="10" rx="3" stroke="#741717" stroke-width="1.8"/><rect x="7" y="28" width="38" height="12" rx="3" stroke="#741717" stroke-width="1.8"/></svg>
+    <!-- champagne top right -->
+    <svg style="top:5%;right:4%;opacity:.12;width:36px;" viewBox="0 0 32 58" fill="none"><path d="M8 4 L24 4 L20 24 L12 24 Z" stroke="#741717" stroke-width="2" stroke-linejoin="round"/><line x1="12" y1="24" x2="16" y2="44" stroke="#741717" stroke-width="2"/><line x1="20" y1="24" x2="16" y2="44" stroke="#741717" stroke-width="2"/><line x1="10" y1="44" x2="22" y2="44" stroke="#741717" stroke-width="2" stroke-linecap="round"/><circle cx="14" cy="12" r="1.8" fill="#741717"/><circle cx="18" cy="8" r="1.4" fill="#741717"/></svg>
+    <!-- bow mid left -->
+    <svg style="top:40%;left:1%;opacity:.1;width:52px;" viewBox="0 0 44 30" fill="none"><path d="M22 15 C16 11 5 5 6 13 C7 19 16 18 22 15Z" stroke="#741717" stroke-width="2"/><path d="M22 15 C28 11 39 5 38 13 C37 19 28 18 22 15Z" stroke="#741717" stroke-width="2"/><path d="M22 15 L17 27" stroke="#741717" stroke-width="1.8" stroke-linecap="round"/><path d="M22 15 L27 27" stroke="#741717" stroke-width="1.8" stroke-linecap="round"/><circle cx="22" cy="15" r="3" stroke="#741717" stroke-width="1.8"/></svg>
+    <!-- cake bottom right -->
+    <svg style="bottom:10%;right:2%;opacity:.11;width:48px;" viewBox="0 0 52 52" fill="none"><rect x="17" y="6" width="2.5" height="8" rx="1.25" stroke="#3C050F" stroke-width="1.8"/><rect x="24.75" y="4" width="2.5" height="10" rx="1.25" stroke="#3C050F" stroke-width="1.8"/><rect x="32.5" y="6" width="2.5" height="8" rx="1.25" stroke="#3C050F" stroke-width="1.8"/><rect x="10" y="18" width="32" height="10" rx="3" stroke="#3C050F" stroke-width="1.8"/><rect x="7" y="28" width="38" height="12" rx="3" stroke="#3C050F" stroke-width="1.8"/></svg>
+    <!-- champagne bottom left -->
+    <svg style="bottom:6%;left:2%;opacity:.1;width:30px;" viewBox="0 0 32 58" fill="none"><path d="M8 4 L24 4 L20 24 L12 24 Z" stroke="#3C050F" stroke-width="2" stroke-linejoin="round"/><line x1="12" y1="24" x2="16" y2="44" stroke="#3C050F" stroke-width="2"/><line x1="20" y1="24" x2="16" y2="44" stroke="#3C050F" stroke-width="2"/><line x1="10" y1="44" x2="22" y2="44" stroke="#3C050F" stroke-width="2" stroke-linecap="round"/></svg>
+    <!-- bow top center -->
+    <svg style="top:2%;left:42%;opacity:.09;width:44px;" viewBox="0 0 44 30" fill="none"><path d="M22 15 C16 11 5 5 6 13 C7 19 16 18 22 15Z" stroke="#741717" stroke-width="2"/><path d="M22 15 C28 11 39 5 38 13 C37 19 28 18 22 15Z" stroke="#741717" stroke-width="2"/><circle cx="22" cy="15" r="3" stroke="#741717" stroke-width="2"/></svg>
+  </div>
+
+  <div class="p2-cards">
+
+    <!-- CARD 1 — $33 -->
+    <div class="ocard" onclick="goCheckout('33')">
+      <div class="ocard-strip-wrap"><div class="ocard-strip ocard-s1"></div></div>
+      <div class="ocard-inner">
+        <div class="ocard-left">
+          <div class="tier-tag tier-tag-1">🎟️ The Party Favor</div>
+          <div class="ocard-label-row"><span class="ocard-label-txt">Access One</span><span class="ocard-label-line"></span></div>
+          <div class="ocard-price">$33</div>
+          <div class="ocard-price-note">
+            <span class="norm-price">Usually $194</span>
+            <span class="birthday-rate">Birthday Rate ♥</span>
+          </div>
+          <div class="ocard-tier">Learn From Me</div>
+          <div class="ocard-tagline">Two masterclasses. Instant access.</div>
+          <ul class="ocard-incl">
+            <li>Build A Signature Series Masterclass</li>
+            <li>Break The Limiting Belief Loop Masterclass</li>
+            <li>Instant access after checkout</li>
+          </ul>
+        </div>
+        <div class="ocard-right">
+          <svg class="ocard-illus" width="32" height="58" viewBox="0 0 32 58" fill="none">
+            <path d="M8 4 L24 4 L20 24 L12 24 Z" stroke="#741717" stroke-width="1.6" stroke-linejoin="round"/>
+            <line x1="12" y1="24" x2="16" y2="44" stroke="#741717" stroke-width="1.6"/>
+            <line x1="20" y1="24" x2="16" y2="44" stroke="#741717" stroke-width="1.6"/>
+            <line x1="10" y1="44" x2="22" y2="44" stroke="#741717" stroke-width="1.6" stroke-linecap="round"/>
+            <circle cx="14" cy="13" r="1.4" fill="#F2C4CE"/>
+            <circle cx="17" cy="9" r="1.1" fill="#F2C4CE"/>
+          </svg>
+          <button class="btn-ocard" onclick="goCheckout('33')">Let's Celebrate! 🎉</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 2 — $333 -->
+    <div class="ocard feat" onclick="goCheckout('333')">
+      <div class="ocard-strip-wrap"><div class="ocard-strip ocard-s2"></div></div>
+      <div class="ocard-inner">
+        <div class="ocard-left">
+          <div class="tier-tag tier-tag-2">🍾 The VIP Lounge · Selling Out Fast!</div>
+          <div class="ocard-label-row"><span class="ocard-label-txt">Access Two · Most Popular</span><span class="ocard-label-line"></span></div>
+          <div class="ocard-price">$333<span class="ocard-price-mo">/mo</span></div>
+          <div class="ocard-price-note">
+            <span class="norm-price">Normally $1,450 for 3 months</span>
+            <span class="birthday-rate">Birthday Rate ♥</span>
+          </div>
+          <div class="ocard-tier">Be In The Room</div>
+          <div class="ocard-tagline">WMHQ Membership at the birthday rate.</div>
+          <ul class="ocard-incl">
+            <li>Full WMHQ Membership access</li>
+            <li>First 3 months at $333/month</li>
+            <li>Returns to $450/month after month 3</li>
+            <li>6-month access</li>
+            <li>Only 8 spots</li>
+          </ul>
+          <div class="wmhq-note"><span>Note: WMHQ Membership inclusions on next page</span></div>
+        </div>
+        <div class="ocard-right">
+          <div class="scarcity-pill"><span class="dot-pulse"></span>Only 8/10 Spots</div>
+          <svg class="ocard-illus" width="52" height="52" viewBox="0 0 52 52" fill="none">
+            <rect x="17" y="6" width="2.5" height="8" rx="1.25" stroke="#741717" stroke-width="1.6"/>
+            <rect x="24.75" y="4" width="2.5" height="10" rx="1.25" stroke="#741717" stroke-width="1.6"/>
+            <rect x="32.5" y="6" width="2.5" height="8" rx="1.25" stroke="#741717" stroke-width="1.6"/>
+            <ellipse cx="18.25" cy="5" rx="1.5" ry="2" fill="#C4914A"/>
+            <ellipse cx="26" cy="3" rx="1.5" ry="2" fill="#C4914A"/>
+            <ellipse cx="33.75" cy="5" rx="1.5" ry="2" fill="#C4914A"/>
+            <rect x="10" y="18" width="32" height="10" rx="3" stroke="#741717" stroke-width="1.6"/>
+            <rect x="7" y="28" width="38" height="12" rx="3" stroke="#741717" stroke-width="1.6"/>
+            <circle cx="19" cy="23.5" r="1.2" fill="#F2C4CE"/>
+            <circle cx="26" cy="23.5" r="1.2" fill="#F2C4CE"/>
+            <circle cx="33" cy="23.5" r="1.2" fill="#F2C4CE"/>
+          </svg>
+          <button class="btn-ocard" onclick="goCheckout('333')">Claim My VIP Seat 🍾</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 3 — $3333 -->
+    <div class="ocard" onclick="goCheckout('3333')">
+      <div class="ocard-strip-wrap"><div class="ocard-strip ocard-s3"></div></div>
+      <div class="ocard-inner">
+        <div class="ocard-left">
+          <div class="tier-tag tier-tag-3">👑 The Private Afterparty</div>
+          <div class="ocard-label-row"><span class="ocard-label-txt">Access Three &nbsp;·&nbsp; Private Table</span><span class="ocard-label-line"></span></div>
+          <div class="price-strike-wrap">
+            <div class="ocard-price">$3333</div>
+          </div>
+          <div class="ocard-price-note">
+            <span class="norm-price">Normally $5,000</span>
+            <span class="birthday-rate">Birthday Rate ♥</span>
+          </div>
+          <div class="ocard-tier">Work Privately With Me</div>
+          <div class="ocard-tagline">High-touch. 8 weeks. Personalised.</div>
+          <ul class="ocard-incl">
+            <li>8-week private strategy intensive</li>
+            <li>3 × 90-minute private calls</li>
+            <li>WMHQ access included</li>
+            <li>Personalised strategy support</li>
+            <li>Only 3 spots</li>
+          </ul>
+          <div class="wmhq-note"><span>Note: Option to pay in 2 instalments on next page</span></div>
+        </div>
+        <div class="ocard-right">
+          <div class="scarcity-pill"><span class="dot-pulse"></span>Only 3 spots</div>
+          <svg class="ocard-illus" width="44" height="30" viewBox="0 0 44 30" fill="none">
+            <path d="M22 15 C16 11 5 5 6 13 C7 19 16 18 22 15Z" stroke="#3C050F" stroke-width="1.8"/>
+            <path d="M22 15 C28 11 39 5 38 13 C37 19 28 18 22 15Z" stroke="#3C050F" stroke-width="1.8"/>
+            <path d="M22 15 L17 27" stroke="#3C050F" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M22 15 L27 27" stroke="#3C050F" stroke-width="1.6" stroke-linecap="round"/>
+            <circle cx="22" cy="15" r="3" stroke="#C4914A" stroke-width="1.8"/>
+          </svg>
+          <button class="btn-ocard" onclick="goCheckout('3333')">I'm Going All In 👑</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <p class="p2-footer">All three offers close when the 7 days end. No extensions. No exceptions.</p>
+</div>
+
+<!-- ════════════════
+   PAGE 3 — CHECKOUT
+════════════════ -->
+<div class="page" id="p3">
+  <div class="p3-topbar">
+    <div class="p3-logo">JP's Birthday Guest List</div>
+    <div class="p3-mini-timer"><span class="lbl">Closes in</span><span id="mini-cd">6D 23H 59M</span></div>
+  </div>
+  <div class="p3-body">
+    <div class="p3-left">
+      <button class="btn-back" style="margin-bottom:22px;" onclick="goTo('p2')">Back to offers</button>
+      <div class="offer-tabs">
+        <button class="otab active" onclick="switchOffer('33',this)">$33 Access</button>
+        <button class="otab" onclick="switchOffer('333',this)">$333 Seat</button>
+        <button class="otab" onclick="switchOffer('3333',this)">$3333 Private Table</button>
+      </div>
+      <div class="p3-kicker-lbl">You selected</div>
+      <h2 class="p3-h" id="p3-h">$33 Access<small>Learn from me</small></h2>
+      <div class="p3-price" id="p3-price">$33</div>
+      <div class="p3-price-note" id="p3-price-note">
+        <span class="norm-price" id="p3-norm">Usually $194</span>
+        <span class="birthday-rate">Birthday Rate ♥</span>
+      </div>
+      <div class="p3-incl-card">
+        <div class="p3-incl-lbl">What's included</div>
+        <ul class="p3-incl-list" id="p3-incl">
+          <li>Build A Signature Series Masterclass</li>
+          <li>Break The Limiting Belief Loop Masterclass</li>
+          <li>Instant access after checkout</li>
+        </ul>
+        <!-- accordion — shown for $333 only -->
+        <div id="p3-accord" style="display:none;">
+          <div class="accord-item" id="accord1">
+            <div class="accord-header" onclick="toggleAccord('accord1')">
+              <span class="accord-header-txt">See what's inside WMHQ</span>
+              <span class="accord-chevron">↓</span>
+            </div>
+            <div class="accord-body">
+              <div class="accord-body-inner">
+                <ul>
+                  <li>Weekly live coaching calls (Business Mastermind & Subconscious Mastery Calls)</li>
+                  <li>Monthly live WMHQ Signature Masterclasses</li>
+                  <li>Personalised ASK JP audits</li>
+                  <li>Private WMHQ community</li>
+                  <li>WMHQ Vault: Content, messaging, sales, subconscious work & nervous system capacity</li>
+                  <li>WMHQ Tools: Signature Series Builder, Conversion Calculator, Break Your Limiting Belief Loop</li>
+                  <li>WMHQ Personal Portal: Private login to track, audit, analyse & keep everything organised vs 47 Google Doc tabs</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accord-item" id="accord2">
+            <div class="accord-header" onclick="toggleAccord('accord2')">
+              <span class="accord-header-txt">Is this personalised to me?</span>
+              <span class="accord-chevron">↓</span>
+            </div>
+            <div class="accord-body">
+              <div class="accord-body-inner">
+                <p>Yes, the membership is personalised through live calls, ASK JP audits, and community support. For this price point, you won't find this level of direct access, feedback, and 1:1-style support anywhere else.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accord-item" id="accord3">
+            <div class="accord-header" onclick="toggleAccord('accord3')">
+              <span class="accord-header-txt">I've tried everything. Why would this be different?</span>
+              <span class="accord-chevron">↓</span>
+            </div>
+            <div class="accord-body">
+              <div class="accord-body-inner">
+                <p>Because most things you've tried gave you either the strategy or the inner work. WMHQ gives you both at the same time, weekly, in real time. The reason the playbook hasn't worked isn't because you're doing it wrong. It's because your nervous system hasn't been built to hold it. We fix both simultaneously.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accord-item" id="accord4">
+            <div class="accord-header" onclick="toggleAccord('accord4')">
+              <span class="accord-header-txt">What makes this different from other memberships?</span>
+              <span class="accord-chevron">↓</span>
+            </div>
+            <div class="accord-body">
+              <div class="accord-body-inner">
+                <p>Most memberships give you strategy or mindset. WMHQ integrates both, weekly, in real time. The Ask JP weekly audit access and the calibre of women inside the community are genuinely rare at this investment level. You're not just getting content. You're getting a room and a mentor.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p3-urgency"><p id="p3-urgency">This offer closes in 7 days. There are no extensions, no replays of this price, and no exceptions.</p></div>
+      <div id="p3-tc-wrap" style="display:none;">
+        <div class="p3-tc-accord" id="p3-tc">
+          <div class="p3-tc-header" onclick="toggleTc()">
+            <span class="p3-tc-header-txt">T&Cs — 6-Month Membership</span>
+            <span class="p3-tc-chevron">↓</span>
+          </div>
+          <div class="p3-tc-body">
+            <div class="p3-tc-body-inner">
+              <p>You're committing to a 6-month membership term, with full access to all WMHQ inclusions from day one.<br><br>
+              Your payments are billed monthly at $333 for the first 3 months, then $450/month for the remaining term.<br><br>
+              After your initial 6-month term, your membership continues month-to-month at the current monthly rate unless 30 days' written notice is provided via email before your renewal date.<br><br>
+              For full Terms &amp; Conditions <a href="https://www.jessicapinili.com/jpinili-terms-conditions" target="_blank">Click Here</a>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- $3333 private accordions -->
+      <div id="p3-private-accord" style="display:none;">
+        <div class="accord-item" id="accord-for-you">
+          <div class="accord-header" onclick="toggleAccord('accord-for-you')">
+            <span class="accord-header-txt">This is for you if...</span>
+            <span class="accord-chevron">↓</span>
+          </div>
+          <div class="accord-body">
+            <div class="accord-body-inner">
+              <ul>
+                <li>You're making sales, but your income still spikes when you're "on" and dips the second life, travel, hormones, or comparison trap enters the chat.</li>
+                <li>You know your offer gets buyers results, but your sales page, content, and voice notes still don't communicate the actual depth of what happens inside.</li>
+                <li>You're not confused by business basics anymore. You're stuck in the messy middle of too many offers, too many ideas, and not enough clean direction.</li>
+                <li>You're ready for someone to come inside your business, spot the exact leak, call out the pattern, refine the move, and help you execute without dragging it out for another quarter.</li>
+                <li>You own a product or service-based business.</li>
+                <li>You pullback after momentum, overthink before the next move, you suddenly get "too busy" right when growth starts getting close.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accord-item" id="accord-not-for-you">
+          <div class="accord-header" onclick="toggleAccord('accord-not-for-you')">
+            <span class="accord-header-txt">This is not for you if...</span>
+            <span class="accord-chevron">↓</span>
+          </div>
+          <div class="accord-body">
+            <div class="accord-body-inner">
+              <p>You want to be carried, coached in theory, or handed strategy you don't intend to implement. Working privately with me is intensive. I will give you direct feedback, clear direction, strategic refinement, and subconscious-level coaching, but you need to show up, be honest, do the work, and actually move. This is for the woman who is ready to be supported, challenged, and held to the standard she says she wants.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- testimonial placeholder lives below as full-width section -->
+    </div><!-- /p3-left -->
+
+    <!-- RIGHT — checkout card -->
+    <div class="cc">
+      <div class="cc-top">
+        <div class="cc-kicker">Order Summary</div>
+        <div class="cc-tier" id="cc-tier">$33 — Learn From Me</div>
+        <div class="cc-tagline" id="cc-tagline">Two masterclasses · instant access</div>
+      </div>
+      <div class="cc-lines">
+        <div class="cc-line"><span id="cc-item">Birthday Access · $33</span><span id="cc-item-p">$33</span></div>
+        <div class="cc-line"><span>Birthday rate applied</span><span style="color:rgba(242,196,206,.55);">♥ Applied</span></div>
+        <div class="cc-xout"><span class="x" id="cc-xout">Usually: $194</span><span class="love">→ Saving with birthday rate</span></div>
+        <div class="cc-line total"><span>Total</span><span class="amt" id="cc-total">$33</span></div>
+      </div>
+      <div class="cc-bottom">
+        <div class="cc-secure">Secure checkout via Stripe</div>
+        <button class="btn-checkout" id="cc-btn">Complete My Order → $33</button>
+        <div id="cc-plan-wrap" style="display:none;">
+          <div class="cc-plan-toggle" id="cc-plan">
+            <div class="cc-plan-header" onclick="togglePlan()">
+              <span class="cc-plan-header-txt">💳 Want a payment plan?</span>
+              <span class="cc-plan-chevron">↓</span>
+            </div>
+            <div class="cc-plan-body">
+              <div class="cc-plan-body-inner">
+                <p>Pay $1,700 now and $1,700 in 2 weeks — same access from day one, split across two payments.</p>
+                <button class="btn-plan" id="cc-plan-btn" onclick="selectInstalment()">Pay in 2 Instalments → $1,700 now</button>
+                <div id="cc-pay-full-wrap" style="display:none;margin-top:8px;">
+                  <button class="btn-plan" onclick="revertToFull()" style="background:rgba(242,196,206,.06);color:rgba(242,196,206,.5);border:1px solid rgba(242,196,206,.12);">No, I'll pay in full → $3,333</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- UPSELL — shown for $33 only -->
+        <div id="cc-upsell-wrap" style="display:none;">
+          <div class="cc-upsell" id="cc-upsell">
+            <div class="cc-upsell-header" onclick="toggleUpsell()">
+              <div class="cc-upsell-toggle"><div class="cc-upsell-toggle-dot"></div></div>
+              <span class="cc-upsell-header-txt">Add: 30 Min Social Media Video Audit</span>
+              <div class="cc-upsell-price-row">
+                <span class="cc-upsell-price-new">$199</span>
+                <span class="cc-upsell-price-old">$555</span>
+              </div>
+            </div>
+            <div class="cc-upsell-body">
+              <div class="cc-upsell-body-inner">
+                <p>A sharp, direct audit of your Instagram or TikTok videos so you can see exactly why your content isn't landing, converting, or attracting the right people. I'll review your hooks, messaging, positioning, video structure, and overall content strategy, then send you clear feedback on what to shift next. Delivered within 2–5 business days.</p>
+                <button class="btn-upsell" id="btn-upsell-yes" onclick="window.open('https://buy.stripe.com/eVq7sLarN50e6Qx8KRgMw0C?prefilled_promo_code=JPBDAY33ACCESS','_blank')">Yes, add my Video Audit → $232 total</button>
+                <button class="btn-upsell-skip" onclick="skipUpsell()">No, I just want the masterclasses</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cc-note">Birthday rate locked for 7 days only.<br>This price does not return after the window closes.</div>
+      </div><!-- /cc-bottom -->
+    </div><!-- /cc -->
+  </div><!-- /p3-body -->
+
+  <!-- FULL WIDTH TESTIMONIAL — controlled by loadOffer -->
+  <div class="p3-testimonial-section" id="p3-testimonial-section">
+    <div class="p3-testimonial-inner">
+      <div class="p3-testimonial-lbl">What women are saying</div>
+      <div id="p3-testimonial-content"></div>
+    </div>
+  </div>
+
+</div><!-- /p3 -->
+
+<script>
+/* ── Offer data ── */
+const OD={
+  '33':{h:'$33 Access',sub:'Learn from me',price:'$33',norm:'Usually $194',
+    incl:[
+      {t:'Build A Signature Series Masterclass',d:'Build a repeatable content series that turns your audience into buyers, on autopilot.'},
+      {t:'Break The Limiting Belief Loop Masterclass',d:'How to break the loop cycle between progress and pullback in 4 stages.'},
+      {t:'Instant access after checkout',d:''}
+    ],
+    accord:false,showTc:false,showPlan:false,
+    urgency:'This offer closes in 7 days. There are no extensions, no replays of this price, and no exceptions.',
+    ccTier:'$33 — Learn From Me',ccTagline:'Two masterclasses · instant access',ccItem:'Birthday Access · $33',ccItemP:'$33',ccTotal:'$33',ccXout:'Usually: $194',ccBtn:'Complete My Order → $33',ccUrl:'https://buy.stripe.com/eVq7sLarN50e6Qx8KRgMw0C?prefilled_promo_code=JPBDAY33ACCESS'},
+  '333':{h:'$333 Seat',sub:'Be in the room with me',price:'$333/mo',norm:'Normally $1,450 for 3 months',
+    incl:[
+      {t:'Full WMHQ Membership access',d:''},
+      {t:'First 3 months at $333/month',d:''},
+      {t:'Returns to $450/month after month 3',d:''},
+      {t:'6-month access',d:''},
+      {t:'Only 8 spots',d:''}
+    ],
+    accord:true,showTc:true,showPlan:false,
+    urgency:'Only 8 spots at the birthday rate. Once they are gone, WMHQ returns to $450/month and this pricing is closed for good. <a href="https://www.womanmasteryhq.com" target="_blank" style="color:var(--wine-deep);font-weight:800;text-decoration:underline;white-space:nowrap;">Full Breakdown →</a>',
+    ccTier:'$333/mo — Be In The Room',ccTagline:'WMHQ birthday rate · 6-month access',ccItem:'WMHQ Membership · Birthday Rate',ccItemP:'$333/mo',ccTotal:'$333/mo',ccXout:'Normally: $1,450 / 3 months',ccBtn:'Secure My $333 Seat →',ccUrl:'https://www.jessicapinili.com/offers/2xQreoAr/checkout?coupon_code=333BDAYJP'},
+  '3333':{h:'$3333 Private Table',sub:'Work privately with me',price:'$3,333',norm:'Normally $5,000',
+    incl:[
+      {t:'8-week private strategy intensive',d:''},
+      {t:'1x 45-minute onboarding call week 1',d:''},
+      {t:'3 × 90-minute private calls with JP',d:''},
+      {t:'1:1 Private Dashboard: Monday–Thursday 9am–3pm AEST private chat in between calls',d:''},
+      {t:'WMHQ membership access included',d:''},
+      {t:'Personalised strategy workshopping document',d:''},
+      {t:'Normally $5,000 · Birthday rate: $3,333',d:''},
+      {t:'Only 3 spots',d:''}
+    ],
+    accord:false,showTc:false,showPlan:true,showPrivateAccord:true,
+    urgency:'3 spots ONLY at this price.',
+    ccTier:'$3,333 — Private Table',ccTagline:'8 weeks · 3 calls · WMHQ included',ccItem:'Private Strategy Intensive',ccItemP:'$3,333',ccTotal:'$3,333',ccXout:'Normally: $5,000',ccBtn:'Reserve My Private Table →',ccUrl:'https://buy.stripe.com/3cIfZhfM78cqfn37GNgMw0D?prefilled_promo_code=JPBDAY3333ACCESS'}
+};
+
+function goTo(id){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo(0,0);}
+
+function goCheckout(tier){
+  loadOffer(tier);
+  document.querySelectorAll('.otab').forEach((t,i)=>{t.classList.toggle('active',['33','333','3333'][i]===tier);});
+  goTo('p3');
+  if(tier==='33') runSocialProof();
+  if(tier==='333') runSocialProof333();
+}
+function switchOffer(tier,btn){document.querySelectorAll('.otab').forEach(t=>t.classList.remove('active'));btn.classList.add('active');loadOffer(tier);}
+
+function loadOffer(tier){
+  const o=OD[tier];if(!o)return;
+  document.getElementById('p3-h').innerHTML=o.h+'<small>'+o.sub+'</small>';
+  document.getElementById('p3-price').textContent=o.price;
+  document.getElementById('p3-norm').textContent=o.norm;
+  document.getElementById('p3-urgency').innerHTML=o.urgency;
+  document.getElementById('p3-incl').innerHTML=o.incl.map(i=>`<li><span>${i.t}</span>${i.d?`<span class="incl-desc">${i.d}</span>`:''}</li>`).join('');
+  document.getElementById('p3-accord').style.display=o.accord?'block':'none';
+  document.getElementById('p3-tc-wrap').style.display=o.showTc?'block':'none';
+  const pa = document.getElementById('p3-private-accord');
+  if(pa) pa.style.display=o.showPrivateAccord?'block':'none';
+  document.getElementById('cc-tier').textContent=o.ccTier;
+  document.getElementById('cc-tagline').textContent=o.ccTagline;
+  document.getElementById('cc-item').textContent=o.ccItem;
+  document.getElementById('cc-item-p').textContent=o.ccItemP;
+  document.getElementById('cc-total').textContent=o.ccTotal;
+  document.getElementById('cc-xout').textContent=o.ccXout;
+  const ccBtn = document.getElementById('cc-btn');
+  ccBtn.textContent=o.ccBtn;
+  ccBtn.onclick=()=>{ window.open(o.ccUrl,'_blank'); };
+  document.getElementById('cc-plan-wrap').style.display=o.showPlan?'block':'none';
+  const uw = document.getElementById('cc-upsell-wrap');
+  if(uw) uw.style.display=(tier==='33')?'block':'none';
+  // reset upsell state on tier switch
+  const cu = document.getElementById('cc-upsell');
+  if(cu){ cu.classList.remove('open','active'); }
+
+  // testimonial section — hidden for $33, image for $333 and $3333
+  const tSection = document.getElementById('p3-testimonial-section');
+  const tContent = document.getElementById('p3-testimonial-content');
+  const testimonials = {
+    '333':'https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/sites/2147575052/images/ae81c-baf2-2aa5-545d-7e58c754f57_Testimonials.png',
+    '3333':'https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/sites/2147575052/images/3ed1fd1-b652-73e0-811e-ea1b683bb38_Testimonials_1_.png'
+  };
+  if(tier==='33'){
+    tSection.style.display='none';
+  } else {
+    tSection.style.display='block';
+    tContent.innerHTML=testimonials[tier]
+      ?`<img src="${testimonials[tier]}" class="p3-testimonial-img" alt="Testimonials"/>`
+      :'';
+  }
+}
+
+function toggleAccord(id){
+  const el=document.getElementById(id);
+  el.classList.toggle('open');
+}
+
+function toggleUpsell(){
+  const box = document.getElementById('cc-upsell');
+  const isOpen = box.classList.contains('open');
+  box.classList.toggle('open');
+  box.classList.toggle('active');
+  const mainBtn = document.getElementById('cc-btn');
+  if(!isOpen){
+    mainBtn.textContent = 'Yes, add my Video Audit → $232 total';
+    mainBtn.onclick = ()=>{ window.open('https://buy.stripe.com/eVq7sLarN50e6Qx8KRgMw0C?prefilled_promo_code=JPBDAY33ACCESS','_blank'); };
+  } else {
+    mainBtn.textContent = 'Complete My Order → $33';
+    mainBtn.onclick = ()=>{ window.open('https://buy.stripe.com/eVq7sLarN50e6Qx8KRgMw0C?prefilled_promo_code=JPBDAY33ACCESS','_blank'); };
+  }
+}
+
+function skipUpsell(){
+  const box = document.getElementById('cc-upsell');
+  box.classList.remove('open','active');
+  const mainBtn = document.getElementById('cc-btn');
+  mainBtn.textContent = 'Complete My Order → $33';
+  mainBtn.onclick = ()=>{ window.open('https://buy.stripe.com/eVq7sLarN50e6Qx8KRgMw0C?prefilled_promo_code=JPBDAY33ACCESS','_blank'); };
+}
+
+function toggleTc(){
+  document.getElementById('p3-tc').classList.toggle('open');
+}
+
+function togglePlan(){
+  document.getElementById('cc-plan').classList.toggle('open');
+}
+
+/* ── CONFETTI ── */
+function fireConfetti(){
+  const canvas=document.getElementById('confetti-canvas');
+  canvas.width=window.innerWidth;canvas.height=window.innerHeight;
+  canvas.classList.add('active');
+  const ctx=canvas.getContext('2d');
+  const colors=['#F2C4CE','#E8B0BD','#D4879A','#741717','#3C050F','#FFFFFF','#FAEAED','#B08B91'];
+  const pieces=[];
+  for(let i=0;i<180;i++){
+    pieces.push({
+      x:Math.random()*canvas.width,y:-10-Math.random()*200,
+      w:6+Math.random()*10,h:3+Math.random()*6,
+      color:colors[Math.floor(Math.random()*colors.length)],
+      rot:Math.random()*360,rotV:(Math.random()-0.5)*8,
+      vx:(Math.random()-0.5)*4,vy:2+Math.random()*5,
+      alpha:1
+    });
+  }
+  let frame=0;
+  function draw(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    pieces.forEach(p=>{
+      p.x+=p.vx;p.y+=p.vy;p.rot+=p.rotV;p.vy+=0.05;
+      if(frame>60)p.alpha=Math.max(0,p.alpha-0.012);
+      ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.rot*Math.PI/180);
+      ctx.globalAlpha=p.alpha;ctx.fillStyle=p.color;
+      ctx.fillRect(-p.w/2,-p.h/2,p.w,p.h);
+      ctx.restore();
+    });
+    frame++;
+    if(frame<160)requestAnimationFrame(draw);
+    else{canvas.classList.remove('active');ctx.clearRect(0,0,canvas.width,canvas.height);setTimeout(()=>goTo('p2'),100);}
+  }
+  draw();
+}
+
+/* ── ENVELOPE ANIMATION ── */
+(function(){
+  // seal pulses to invite click
+  const seal = document.getElementById('env-seal');
+  seal.style.animation = 'sealPulse 2s ease-in-out infinite';
+})();
+
+function openEnvelope(){
+  const overlay = document.getElementById('env-overlay');
+  const flap    = document.getElementById('env-ft');
+  const seal    = document.getElementById('env-seal');
+  const card    = document.getElementById('env-card');
+  const tapBtn  = document.getElementById('env-tap');
+
+  // lock seal click immediately
+  seal.style.cursor = 'default';
+  seal.style.animation = 'none';
+  seal.onclick = null;
+
+  // seal pops off
+  setTimeout(()=>{ seal.classList.add('pop'); }, 80);
+  // flap opens
+  setTimeout(()=>{ flap.classList.add('open'); }, 400);
+  // card rises out
+  setTimeout(()=>{ card.classList.add('rise'); }, 1600);
+  // overlay fades away revealing page underneath
+  setTimeout(()=>{ overlay.classList.add('hide'); }, 2800);
+  setTimeout(()=>{ overlay.style.display='none'; }, 3800);
+}
+
+function dismissEnvelope(){ openEnvelope(); }
+
+/* ── INSTALMENT SELECT ── */
+function selectInstalment(){
+  const mainBtn   = document.getElementById('cc-btn');
+  const planBtn   = document.getElementById('cc-plan-btn');
+  const fullWrap  = document.getElementById('cc-pay-full-wrap');
+  mainBtn.textContent = 'PAY IN 2 INSTALMENTS → $1,700 NOW';
+  mainBtn.onclick = ()=>{ window.open('https://buy.stripe.com/6oU8wP43pdwK3El9OVgMw0E','_blank'); };
+  planBtn.textContent = '✓ Payment plan selected';
+  planBtn.style.opacity = '.45';
+  planBtn.style.cursor = 'default';
+  planBtn.onclick = null;
+  if(fullWrap) fullWrap.style.display = 'block';
+}
+
+function revertToFull(){
+  const mainBtn   = document.getElementById('cc-btn');
+  const planBtn   = document.getElementById('cc-plan-btn');
+  const fullWrap  = document.getElementById('cc-pay-full-wrap');
+  mainBtn.textContent = 'Reserve My Private Table →';
+  mainBtn.onclick = ()=>{ window.open('https://buy.stripe.com/3cIfZhfM78cqfn37GNgMw0D?prefilled_promo_code=JPBDAY3333ACCESS','_blank'); };
+  planBtn.textContent = 'Pay in 2 Instalments → $1,700 now';
+  planBtn.style.opacity = '1';
+  planBtn.style.cursor = 'pointer';
+  planBtn.onclick = selectInstalment;
+  if(fullWrap) fullWrap.style.display = 'none';
+}
+(function(){
+  const KEY='jp33_v4';let end;
+  // May 31st midnight AEST (Brisbane UTC+10) = May 31st 14:00 UTC
+  end = new Date('2026-05-31T14:00:00Z');
+  try{localStorage.setItem(KEY,end.getTime());}catch(e){}
+  function pad(n){return String(Math.max(0,Math.floor(n))).padStart(2,'0');}
+  function tick(){
+    const diff=Math.max(0,end-Date.now());
+    const d=Math.floor(diff/86400000),h=Math.floor((diff%86400000)/3600000),
+          m=Math.floor((diff%3600000)/60000),s=Math.floor((diff%60000)/1000);
+    ['cd-d','cd-h','cd-m','cd-s'].forEach((id,i)=>{const el=document.getElementById(id);if(el)el.textContent=pad([d,h,m,s][i]);});
+    const p2els = [['p2-cd-d',d],['p2-cd-h',h],['p2-cd-m',m],['p2-cd-s',s]];
+    p2els.forEach(([id,v])=>{const el=document.getElementById(id);if(el)el.textContent=pad(v);});
+    const mc=document.getElementById('mini-cd');if(mc)mc.textContent=`${pad(d)}D ${pad(h)}H ${pad(m)}M`;
+  }
+  tick();setInterval(tick,1000);
+})();
+/* ── SOCIAL PROOF TOASTS — $33 only ── */
+function runSocialProof(){
+  const toast = document.getElementById('sp-toast');
+  const txt   = document.getElementById('sp-txt');
+
+  function show(msg, delay){
+    setTimeout(()=>{
+      txt.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(()=>{ toast.classList.remove('show'); }, 3000);
+    }, delay);
+  }
+
+  show('Lilly from Darwin just purchased this!', 3000);
+  show('Julie from Spain just purchased this!', 7500);
+  show('C from Perth just purchased this!', 12000);
+  show('Tali from London just purchased this!', 16500);
+  show('Bel from California just purchased this!', 21000);
+  show('Jess from New Zealand just purchased this!', 25500);
+}
+
+function runSocialProof333(){
+  const toast = document.getElementById('sp-toast');
+  const txt   = document.getElementById('sp-txt');
+
+  function show(msg, delay){
+    setTimeout(()=>{
+      txt.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(()=>{ toast.classList.remove('show'); }, 3000);
+    }, delay);
+  }
+
+  show('Tia from Sydney just purchased this!', 3000);
+  show('Anne from Wollongong just purchased this!', 7500);
+  show('Harriet from Indonesia just purchased this!', 12000);
+}
+</script>
+<!-- social proof toast -->
+<div class="sp-toast" id="sp-toast">
+  <span class="sp-dot"></span>
+  <span class="sp-txt" id="sp-txt">Someone just purchased this!</span>
+</div>
+
+</body>
+</html>
