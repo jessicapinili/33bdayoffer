@@ -1272,13 +1272,13 @@ function fireConfetti(){
   const ctx=canvas.getContext('2d');
   const colors=['#F2C4CE','#E8B0BD','#D4879A','#741717','#3C050F','#FFFFFF','#FAEAED','#B08B91'];
   const pieces=[];
-  for(let i=0;i<180;i++){
+  for(let i=0;i<140;i++){
     pieces.push({
-      x:Math.random()*canvas.width,y:-10-Math.random()*200,
+      x:Math.random()*canvas.width,y:-10-Math.random()*80,
       w:6+Math.random()*10,h:3+Math.random()*6,
       color:colors[Math.floor(Math.random()*colors.length)],
-      rot:Math.random()*360,rotV:(Math.random()-0.5)*8,
-      vx:(Math.random()-0.5)*4,vy:2+Math.random()*5,
+      rot:Math.random()*360,rotV:(Math.random()-0.5)*10,
+      vx:(Math.random()-0.5)*6,vy:4+Math.random()*6,
       alpha:1
     });
   }
@@ -1286,16 +1286,16 @@ function fireConfetti(){
   function draw(){
     ctx.clearRect(0,0,canvas.width,canvas.height);
     pieces.forEach(p=>{
-      p.x+=p.vx;p.y+=p.vy;p.rot+=p.rotV;p.vy+=0.05;
-      if(frame>60)p.alpha=Math.max(0,p.alpha-0.012);
+      p.x+=p.vx;p.y+=p.vy;p.rot+=p.rotV;p.vy+=0.08;
+      if(frame>20)p.alpha=Math.max(0,p.alpha-0.032);
       ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.rot*Math.PI/180);
       ctx.globalAlpha=p.alpha;ctx.fillStyle=p.color;
       ctx.fillRect(-p.w/2,-p.h/2,p.w,p.h);
       ctx.restore();
     });
     frame++;
-    if(frame<160)requestAnimationFrame(draw);
-    else{canvas.classList.remove('active');ctx.clearRect(0,0,canvas.width,canvas.height);setTimeout(()=>goTo('p2'),100);}
+    if(frame<55)requestAnimationFrame(draw);
+    else{canvas.classList.remove('active');ctx.clearRect(0,0,canvas.width,canvas.height);setTimeout(()=>goTo('p2'),80);}
   }
   draw();
 }
