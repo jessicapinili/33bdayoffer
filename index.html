@@ -1112,7 +1112,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9990;b
             <div class="cc-upsell-body">
               <div class="cc-upsell-body-inner">
                 <p>A sharp, direct audit of your Instagram or TikTok videos so you can see exactly why your content isn't landing, converting, or attracting the right people. I'll review your hooks, messaging, positioning, video structure, and overall content strategy, then send you clear feedback on what to shift next. Delivered within 2–5 business days.</p>
-                <button class="btn-upsell" id="btn-upsell-yes" onclick="window.open('https://buy.stripe.com/eVq7sLarN50e6Qx8KRgMw0C?prefilled_promo_code=JPBDAY33ACCESS','_blank')">Yes, add my Video Audit → $232 total</button>
+                <button class="btn-upsell" id="btn-upsell-yes" onclick="window.open('https://www.jessicapinili.com/offers/NPWPHDL2/checkout?coupon_code=JPBDAY33ACCESS','_blank')">Yes, add my Video Audit → $232 total</button>
                 <button class="btn-upsell-skip" onclick="skipUpsell()">No, I just want the masterclasses</button>
               </div>
             </div>
@@ -1145,7 +1145,7 @@ const OD={
     ],
     accord:false,showTc:false,showPlan:false,
     urgency:'This offer closes in 7 days. There are no extensions, no replays of this price, and no exceptions.',
-    ccTier:'$33 — Learn From Me',ccTagline:'Two masterclasses · instant access',ccItem:'Birthday Access · $33',ccItemP:'$33',ccTotal:'$33',ccXout:'Usually: $194',ccBtn:'Complete My Order → $33',ccUrl:'https://buy.stripe.com/eVq7sLarN50e6Qx8KRgMw0C?prefilled_promo_code=JPBDAY33ACCESS'},
+    ccTier:'$33 — Learn From Me',ccTagline:'Two masterclasses · instant access',ccItem:'Birthday Access · $33',ccItemP:'$33',ccTotal:'$33',ccXout:'Usually: $194',ccBtn:'Complete My Order → $33',ccUrl:'https://www.jessicapinili.com/offers/NPWPHDL2/checkout?coupon_code=JPBDAY33ACCESS'},
   '333':{h:'$333 Seat',sub:'Be in the room with me',price:'$333/mo',norm:'Normally $1,450 for 3 months',
     incl:[
       {t:'Full WMHQ Membership access',d:''},
@@ -1170,7 +1170,7 @@ const OD={
     ],
     accord:false,showTc:false,showPlan:true,showPrivateAccord:true,
     urgency:'3 spots ONLY at this price.',
-    ccTier:'$3,333 — Private Table',ccTagline:'8 weeks · 3 calls · WMHQ included',ccItem:'Private Strategy Intensive',ccItemP:'$3,333',ccTotal:'$3,333',ccXout:'Normally: $5,000',ccBtn:'Reserve My Private Table →',ccUrl:'https://buy.stripe.com/3cIfZhfM78cqfn37GNgMw0D?prefilled_promo_code=JPBDAY3333ACCESS'}
+    ccTier:'$3,333 — Private Table',ccTagline:'8 weeks · 3 calls · WMHQ included',ccItem:'Private Strategy Intensive',ccItemP:'$3,333',ccTotal:'$3,333',ccXout:'Normally: $5,000',ccBtn:'Reserve My Private Table →',ccUrl:'https://www.jessicapinili.com/offers/6p47q6B2/checkout'}
 };
 
 function goTo(id){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo(0,0);}
@@ -1241,10 +1241,10 @@ function toggleUpsell(){
   const mainBtn = document.getElementById('cc-btn');
   if(!isOpen){
     mainBtn.textContent = 'Yes, add my Video Audit → $232 total';
-    mainBtn.onclick = ()=>{ window.open('https://buy.stripe.com/eVq7sLarN50e6Qx8KRgMw0C?prefilled_promo_code=JPBDAY33ACCESS','_blank'); };
+    mainBtn.onclick = ()=>{ window.open('https://www.jessicapinili.com/offers/NPWPHDL2/checkout?coupon_code=JPBDAY33ACCESS','_blank'); };
   } else {
     mainBtn.textContent = 'Complete My Order → $33';
-    mainBtn.onclick = ()=>{ window.open('https://buy.stripe.com/eVq7sLarN50e6Qx8KRgMw0C?prefilled_promo_code=JPBDAY33ACCESS','_blank'); };
+    mainBtn.onclick = ()=>{ window.open('https://www.jessicapinili.com/offers/NPWPHDL2/checkout?coupon_code=JPBDAY33ACCESS','_blank'); };
   }
 }
 
@@ -1253,7 +1253,7 @@ function skipUpsell(){
   box.classList.remove('open','active');
   const mainBtn = document.getElementById('cc-btn');
   mainBtn.textContent = 'Complete My Order → $33';
-  mainBtn.onclick = ()=>{ window.open('https://buy.stripe.com/eVq7sLarN50e6Qx8KRgMw0C?prefilled_promo_code=JPBDAY33ACCESS','_blank'); };
+  mainBtn.onclick = ()=>{ window.open('https://www.jessicapinili.com/offers/NPWPHDL2/checkout?coupon_code=JPBDAY33ACCESS','_blank'); };
 }
 
 function toggleTc(){
@@ -1338,7 +1338,7 @@ function selectInstalment(){
   const planBtn   = document.getElementById('cc-plan-btn');
   const fullWrap  = document.getElementById('cc-pay-full-wrap');
   mainBtn.textContent = 'PAY IN 2 INSTALMENTS → $1,700 NOW';
-  mainBtn.onclick = ()=>{ window.open('https://buy.stripe.com/6oU8wP43pdwK3El9OVgMw0E','_blank'); };
+  mainBtn.onclick = ()=>{ window.open('https://www.jessicapinili.com/offers/6p47q6B2/checkout','_blank'); };
   planBtn.textContent = '✓ Payment plan selected';
   planBtn.style.opacity = '.45';
   planBtn.style.cursor = 'default';
@@ -1351,7 +1351,7 @@ function revertToFull(){
   const planBtn   = document.getElementById('cc-plan-btn');
   const fullWrap  = document.getElementById('cc-pay-full-wrap');
   mainBtn.textContent = 'Reserve My Private Table →';
-  mainBtn.onclick = ()=>{ window.open('https://buy.stripe.com/3cIfZhfM78cqfn37GNgMw0D?prefilled_promo_code=JPBDAY3333ACCESS','_blank'); };
+  mainBtn.onclick = ()=>{ window.open('https://www.jessicapinili.com/offers/6p47q6B2/checkout','_blank'); };
   planBtn.textContent = 'Pay in 2 Instalments → $1,700 now';
   planBtn.style.opacity = '1';
   planBtn.style.cursor = 'pointer';
